@@ -15,7 +15,7 @@ $app->post('/search', function () use ($app) {
         'name' => '%'.$term.'%'
     ));
 
-    return $app['twig']->render('homepage.html.twig', array(
+    return $app['twig']->render('_search_results.html.twig', array(
         'results' => $results
     ));
 })->bind('search_car');
