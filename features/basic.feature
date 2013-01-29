@@ -18,3 +18,10 @@ Feature: Basic examples
     Given I am on "http://devclub.eu"
     Then I should not see "Warning:"
       And I should not see "Notice:"
+
+  Scenario: Navigate around on devclub
+    Given I am on "http://devclub.eu"
+    When I follow "Анонс январской встречи: 30.01.2013"
+    Then I should see "BDD на PHP с помощью Behat + Mink."
+      And I follow "Роман Маринченко"
+      Then I should be on "https://github.com/Inori"
