@@ -19,3 +19,4 @@ Scenario: Search results for "mustang"
     And I press "Search"
     And I wait for search results to appear
   Then I should see "Ford Mustang GT500" in results table
+    And I wait for "5" seconds

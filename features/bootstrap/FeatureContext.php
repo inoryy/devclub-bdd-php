@@ -60,4 +60,12 @@ class FeatureContext extends MinkContext
     {
         $this->getSession()->wait(5000, "$('#search_results table td').length > 0");
     }
+
+    /**
+     * @Given /^I wait for "([^"]*)" seconds$/
+     */
+    public function iWaitForSeconds($seconds)
+    {
+        $this->getSession()->wait($seconds * 1000);
+    }
 }
