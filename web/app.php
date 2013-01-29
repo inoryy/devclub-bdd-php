@@ -9,7 +9,11 @@ $app->get('/', function () use ($app) {
 });
 
 $app->post('/search', function () use ($app) {
-    $results = array();
+    $term = $app['request']->get('car_name');
+
+    $results = $app['db']->fetchArray('SELECT name FROM cars WHERE name LIKE :name', array(
+        'name' => '%'.$term.'%'
+    ));
 
     return $app['twig']->render('homepage.html.twig', array(
         'results' => $results
