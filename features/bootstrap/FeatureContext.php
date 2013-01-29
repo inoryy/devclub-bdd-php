@@ -52,4 +52,12 @@ class FeatureContext extends MinkContext
     {
         $this->app['db']->executeUpdate('INSERT INTO cars (name) VALUES (?)', array($carName));
     }
+
+    /**
+     * @Given /^I wait for search results to appear$/
+     */
+    public function iWaitForSearchResultsToAppear()
+    {
+        $this->getSession()->wait(5000, "$('#search_results table td').length > 0");
+    }
 }
