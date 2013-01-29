@@ -7,6 +7,9 @@ Feature: Basic examples
     Given I am on homepage
     Then I should see "Hello Devclub!"
 
-  Scenario: Check google.com website
+  Scenario: Check that google.com shows regional results, then go to non-regional page
     Given I am on "http://google.com/"
-    Then I should see "Google Search"
+    Then I should not see "Google Search"
+      And I should see "Google otsing"
+      And I go to "http://google.com/ncr"
+      Then I should see "Google Search"
