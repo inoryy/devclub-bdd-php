@@ -4,4 +4,19 @@
     <div class="jumbotron">
       <p class="lead">Hello Devclub!</p>
     </div>
+
+    <form id="car_search_form" action="{{ path('search_car') }}" method="POST" class="form-search">
+        <fieldset>
+            <label for="car_name">Car Name</label>
+            <input type="text" name="car_name" id="car_name" class="input-medium search-query" />
+
+            <input id="search_submit" type="submit" class="btn btn-success" value="Search" />
+        </fieldset>
+    </form>
+
+    <div id="search_results">
+        {% if results is defined %}
+            {% include '_search_results.html.twig' %}
+        {% endif %}
+    </div>
 {% endblock %}

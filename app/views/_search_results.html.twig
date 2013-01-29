@@ -1,0 +1,20 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Name</th>
+      </tr>
+    </thead>
+    <tbody>
+        {% for result in results %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td class="name">{{ result }}</td>
+      </tr>
+      {% else %}
+        <tr>
+            <td colspan="2" class="alert alert-error">Sorry, no cars found!</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+</table>
