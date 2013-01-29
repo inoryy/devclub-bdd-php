@@ -6,3 +6,7 @@ Feature: Basic examples
   Scenario: See welcome text on homepage
     Given I am on homepage
     Then I should see "Hello Devclub!"
+
+  Scenario: Check google.com website
+    Given I am on "http://google.com/"
+    Then I should see "Google Search"
