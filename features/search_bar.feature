@@ -3,8 +3,9 @@ Feature: Search bar
   As a website visitor
   I need a search system
 
-Scenario: Search results for "mustang"
-  Given I am on homepage
+Scenario: No results for "mustang" search
+  Given there are no car entries in the database
+    And I am on homepage
   When I fill in "Car Name" with "mustang"
     And I press "Search"
-  Then I should see "Ford Mustang GT500" in results table
+  Then I should see "Sorry, no cars found"

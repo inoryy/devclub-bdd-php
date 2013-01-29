@@ -28,4 +28,20 @@ class FeatureContext extends MinkContext
     {
         $this->app = new AppKernel();
     }
+
+    /**
+     * @Given /^there are no car entries in the database$/
+     */
+    public function thereAreNoCarEntriesInTheDatabase()
+    {
+        $this->app['db']->executeUpdate('DELETE FROM cars WHERE 1 = 1');
+    }
+
+    /**
+     * @Then /^I should see "([^"]*)" in results table$/
+     */
+    public function iShouldSeeInResultsTable($text)
+    {
+        return new Then(sprintf('I should see "%s" in the "#search_results table td.name" element', $text));
+    }
 }
