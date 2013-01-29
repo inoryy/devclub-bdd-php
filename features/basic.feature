@@ -13,3 +13,8 @@ Feature: Basic examples
       And I should see "Google otsing"
       And I go to "http://google.com/ncr"
       Then I should see "Google Search"
+
+  Scenario: Devclub visitors should not see code errors
+    Given I am on "http://devclub.eu"
+    Then I should not see "Warning:"
+      And I should not see "Notice:"
