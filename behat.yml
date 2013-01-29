@@ -1,0 +1,9 @@
+default:
+  extensions:
+    Behat\MinkExtension\Extension:
+        default_session: 'goutte'
+        base_url: 'http://devclub.l/'
+        javascript_session: 'selenium2'
+        browser_name: firefox
+        goutte: ~
+        selenium2: ~

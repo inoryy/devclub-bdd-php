@@ -1,0 +1,6 @@
+/app/cache/*
+
+# In a real project you would probably want to uncomment this
+# I just wanted to avoid potential problems with connectivity
+# /vendor/
+# composer.phar
