@@ -1,0 +1,25 @@
+{
+    "require": {
+        "silex/silex": "*",
+        "twig/twig": "*",
+        "doctrine/dbal": "*",
+        "symfony/twig-bridge": "*"
+    },
+    "require-dev": {
+        "behat/behat": "*",
+        "behat/mink-extension": "*",
+        "behat/mink-browserkit-driver": "*",
+        "behat/common-contexts": "*",
+        "behat/mink-selenium2-driver": "*",
+        "behat/mink-goutte-driver": "*"
+    },
+    "minimum-stability": "dev",
+    "config": {
+        "bin-dir": "bin"
+    },
+    "autoload": {
+        "psr-0": {
+            "": "app"
+        }
+    }
+}
