@@ -9,3 +9,11 @@ Scenario: No results for "mustang" search
   When I fill in "Car Name" with "mustang"
     And I press "Search"
   Then I should see "Sorry, no cars found"
+
+Scenario: Search results for "mustang"
+  Given there are no car entries in the database
+    And there is "Ford Mustang GT500" car entry in the database
+    And I am on homepage
+  When I fill in "Car Name" with "mustang"
+    And I press "Search"
+  Then I should see "Ford Mustang GT500" in results table

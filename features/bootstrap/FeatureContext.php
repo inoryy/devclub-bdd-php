@@ -44,4 +44,12 @@ class FeatureContext extends MinkContext
     {
         return new Then(sprintf('I should see "%s" in the "#search_results table td.name" element', $text));
     }
+
+    /**
+     * @Given /^there is "([^"]*)" car entry in the database$/
+     */
+    public function thereIsCarEntryInTheDatabase($carName)
+    {
+        $this->app['db']->executeUpdate('INSERT INTO cars (name) VALUES (?)', array($carName));
+    }
 }
