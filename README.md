@@ -7,9 +7,9 @@ NB! To view full app in action checkout `step-15` branch
 
 * [step-1](https://github.com/Inori/devclub-bdd-php/commit/step-1) = composer.json init
 
-* [step-2](https://github.com/Inori/devclub-bdd-php/commit/step-2) = install whole project & add bootstrap code
+* [step-2](https://github.com/Inori/devclub-bdd-php/commit/step-2) = install whole project & add bootstrap code `php composer.phar install --dev`
 
-* [step-3](https://github.com/Inori/devclub-bdd-php/commit/step-3) = init behat, added first (failing) scenario
+* [step-3](https://github.com/Inori/devclub-bdd-php/commit/step-3) = init behat, added first (failing) scenario `bin/behat --init`
 
 * [step-4](https://github.com/Inori/devclub-bdd-php/commit/step-4) = added enough code to get first scenario to pass
 
